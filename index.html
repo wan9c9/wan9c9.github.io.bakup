@@ -1,1 +1,13 @@
 Hello World!
+
+
+How to configure a local cpp workspace.
+
+nlopt: 
+http://ab-initio.mit.edu/wiki/index.php/NLopt_Installation#NLopt_with_C.2B.2B_algorithms
+by default, nlopt is compiled into a static library, we usually want a shared library.
+
+./configure --enable-shared --prefix=~/opt 
+
+find_path cannot use $HOME variable
+
