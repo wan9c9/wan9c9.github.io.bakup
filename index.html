@@ -11,3 +11,10 @@ by default, nlopt is compiled into a static library, we usually want a shared li
 
 find_path cannot use $HOME variable
 
+
+Let cmake compile and link with pthreads f you have CMake 3.1.0+, this becomes even easier:
+
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+find_package(Threads REQUIRED)
+target_link_libraries(my_app Threads::Threads)
+If you want to use one of the first two methods with CMake 3.1+, you will need set(THREADS_PREFER_PTHREAD_FLAG ON) there too.
